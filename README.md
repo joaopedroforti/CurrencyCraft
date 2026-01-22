@@ -35,5 +35,4 @@ Open [http://localhost:3000](http://localhost:3000) to see the result.
 - `src/app`: UI and Layout.
 - `src/hooks`: Data fetching logic.
 
----
-*Developed for study purposes.*
+*Developed for study purposes by João Pedro Forti.*
