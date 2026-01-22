@@ -17,9 +17,9 @@ The project is intentionally kept simple, focusing on core functionality and cle
 
 *   **Real-time Conversion:** Fetches the latest exchange rates from a reliable, free API.
 *   **Responsive Design:** Built with Tailwind CSS for a clean and mobile-friendly interface.
-*   **Clean Architecture:** Uses a custom React Hook (`useExchangeRates` ) to separate data fetching logic from the UI components.
+*   **Clean Architecture:** Uses a custom React Hook (`useExchangeRates`) to separate data fetching logic from the UI components.
 *   **TypeScript:** Ensures type safety and improves code maintainability.
-*   **No API Key Required:** Utilizes the public and free [Frankfurter API](https://www.frankfurter.app/ ) for exchange rate data.
+*   **No API Key Required:** Utilizes the public and free [Frankfurter API](https://www.frankfurter.app/) for exchange rate data.
 
 ## 🛠️ Tech Stack
 
@@ -38,29 +38,85 @@ Follow these steps to get a copy of the project up and running on your local mac
 
 You will need the following software installed on your system:
 
-*   [Node.js](https://nodejs.org/ ) (version 18.x or higher)
-*   [npm](https://www.npmjs.com/ ) or [Yarn](https://yarnpkg.com/ )
+*   [Node.js](https://nodejs.org/) (version 18.x or higher)
+*   [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ### Installation and Setup
 
 1.  **Clone the repository:**
-    ```bash
+    \`\`\`bash
     git clone https://github.com/your-username/currency-craft.git
     cd currency-craft
-    ```
+    \`\`\`
 
 2.  **Install dependencies:**
-    ```bash
+    \`\`\`bash
     npm install
-    ```
+    # or
+    yarn install
+    \`\`\`
 
 3.  **Run the development server:**
-    ```bash
+    \`\`\`bash
     npm run dev
-    ```
+    # or
+    yarn dev
+    \`\`\`
 
 4.  **Open in your browser:**
-    The application will be running at [http://localhost:3000](http://localhost:3000 ).
+    The application will be running at [http://localhost:3000](http://localhost:3000).
 
 ## 📁 Project Structure
 
+The project follows a standard Next.js structure, with a focus on modularity:
+
+\`\`\`
+currency-craft/
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Global styles using Tailwind CSS
+│   │   ├── layout.tsx       # Root layout component
+│   │   └── page.tsx         # Main Currency Converter component (Client Component)
+│   ├── hooks/
+│   │   └── useExchangeRates.ts # Custom hook for API data fetching
+│   └── components/          # (Optional) For future reusable components
+├── public/
+├── next.config.js
+├── package.json
+└── README.md
+\`\`\`
+
+## 💡 Key Implementation Details
+
+### Data Fetching with Custom Hook
+
+The core logic for fetching data is encapsulated in `src/hooks/useExchangeRates.ts`. This hook handles the asynchronous API call, manages loading and error states, and ensures the data is only fetched when the `base` currency changes.
+
+This approach keeps the main `page.tsx` component clean and focused solely on the presentation and user interaction logic.
+
+### API Endpoint
+
+The application uses the following endpoint from the Frankfurter API:
+
+\`\`\`
+https://api.frankfurter.dev/latest?base=[FROM_CURRENCY]
+\`\`\`
+
+This endpoint returns the latest exchange rates relative to the specified base currency, which is then used to calculate the converted amount.
+
+## 🤝 Contributing
+
+This is a simple study project, but feel free to fork the repository and implement new features, such as:
+
+*   Adding a list of all available currencies from the API.
+*   Implementing a chart to show historical rates.
+*   Adding a dark mode toggle.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+*Built with simplicity and craft by João Pedro Forti
+*
+\`\`\`
