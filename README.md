@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CurrencyCraft: Simple Currency Converter
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js Badge"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Badge"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS Badge"/>
+</p>
 
-First, run the development server:
+## 🌟 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**CurrencyCraft** is a minimal, fast, and responsive currency converter application built with the modern web stack. It serves as an excellent starting point for developers looking to showcase their skills in **Next.js**, **React Hooks**, and **external API consumption**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project is intentionally kept simple, focusing on core functionality and clean code structure, making it an ideal portfolio piece for demonstrating fundamental frontend development practices.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **Real-time Conversion:** Fetches the latest exchange rates from a reliable, free API.
+*   **Responsive Design:** Built with Tailwind CSS for a clean and mobile-friendly interface.
+*   **Clean Architecture:** Uses a custom React Hook (`useExchangeRates` ) to separate data fetching logic from the UI components.
+*   **TypeScript:** Ensures type safety and improves code maintainability.
+*   **No API Key Required:** Utilizes the public and free [Frankfurter API](https://www.frankfurter.app/ ) for exchange rate data.
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | Next.js (App Router) | React framework for production-ready applications. |
+| **Language** | TypeScript | Statically typed superset of JavaScript. |
+| **Styling** | Tailwind CSS | Utility-first CSS framework for rapid UI development. |
+| **Data Source** | Frankfurter API | Free and open-source API for real-time exchange rates. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Follow these steps to get a copy of the project up and running on your local machine.
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You will need the following software installed on your system:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   [Node.js](https://nodejs.org/ ) (version 18.x or higher)
+*   [npm](https://www.npmjs.com/ ) or [Yarn](https://yarnpkg.com/ )
+
+### Installation and Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/currency-craft.git
+    cd currency-craft
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in your browser:**
+    The application will be running at [http://localhost:3000](http://localhost:3000 ).
+
+## 📁 Project Structure
+
